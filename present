@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+
+require 'webrick'
+include WEBrick
+
+def options
+  @options ||= begin
+    args = ARGV.dup
+    document_root = args.shift if args.size % 2 == 1
+    arguments = Hash[*args.dup]
+
+    {
+      :port => arguments['-p'],
+      :document_root => document_root
+    }
+  end
+end
+
+document_root = "#{Dir.pwd}/presentations/#{options[:document_root]}/html" if options[:document_root]
+dir = document_root ? document_root : Dir.pwd + '/presentations'
+port = options[:port] || 1337
+
+puts "URL: http://#{Socket.gethostname}:#{port}"
+
+s = HTTPServer.new(
+  :Port         => port,
+  :DocumentRoot => dir
+)
+
+trap("INT") { s.shutdown }
+s.start
