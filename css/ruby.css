@@ -1,0 +1,71 @@
+.ruby {
+
+}
+
+.ruby .normal {
+  
+}
+
+.ruby .comment {
+  color: #BC9458;
+  font-style: italic;
+}
+
+.ruby .keyword {
+  color: #CC7833;
+}
+
+.ruby .method {
+  color: #FFC66D;
+}
+
+.ruby .class {
+
+}
+
+.ruby .module {
+
+}
+
+.ruby .punct {
+}
+
+.ruby .symbol {
+  color: #6D9CBE;
+}
+
+.ruby .string {
+  color: #A5C261;
+}
+
+.ruby .char {
+
+}
+
+.ruby .ident {
+
+}
+
+.ruby .constant {
+  color: #DA4939; /* #6D9CBE; */
+}
+
+.ruby .regex {
+  color: #A5C261;
+}
+
+.ruby .number {
+  color: #A5C261;
+}
+
+.ruby .attribute {
+  color: #D0D0FF;
+}
+
+.ruby .global {
+
+}
+
+.ruby .expr {
+
+}
